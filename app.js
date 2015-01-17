@@ -10,11 +10,29 @@ app.set('views', path.join(__dirname, 'views'));
 app.set('public', path.join(__dirname, 'public'));
 app.set('view engine', 'hjs');
 app.set('port', process.env.PORT || 3000);
+app.use(session({secret: 'rehabilitate'}));
 
 app.use(logger('dev'));
 app.use(bodyParser.urlencoded({extended: false}));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
+
+app.use(function(req, res, next) {
+  if (req.session.message) {
+    res.locals.message = req.session.message;
+    req.session.message = null;
+  }
+
+  if (!req.session.settings) {
+    req.session.settings = [];
+  }
+	
+  if (!req.session.contacts) {
+    req.session.contacts = [];
+  }
+
+  next();
+});
 
 var routes = require('./routes');
 app.use('/', routes);
