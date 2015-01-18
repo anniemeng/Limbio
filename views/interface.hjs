@@ -24,6 +24,8 @@
 			<br>
 			<p class= "reps"></p>
 		</div>
+    <img src="img/wrist_up.jpg">
+    <img src="img/wrist_down.jpg">
 		<form action='/twilio' method='post'>
 			<input type='submit' value="Text!">
 		</form>
