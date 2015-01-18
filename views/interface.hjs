@@ -88,17 +88,6 @@
            	  	   		$( ".reps").text(count_reps);
            	  		}
 
-           	  		if (count_reps == 0) {
-           	  			count_reps = {{reps}};
-           	  			$( ".reps").text(count_reps);
-           	  			count_sets = count_sets - 1;
-           	  			$( ".sets").text(count_sets);
-           	  		}
-
-           	  		if (count_sets == 0) {
-           	  			alert ("ANNDD YOUU AREEE THE CHAMMPIOOONN");
-           	  		}
-
             	  }
             		if (pose_name == 'wave_out' && edge) {
              	   		console.log('good job (wave out)!');
@@ -111,18 +100,18 @@
            	  	   			count_reps = count_reps - 1;
            	  	   			$( ".reps").text(count_reps);
            	  			}
-
-           	  			if (count_reps == 0) {
-           	  				count_reps = {{reps}};
-           	  				$( ".reps").text(count_reps);
-           	  				count_sets = count_sets - 1;
-           	  				$( ".sets").text(count_sets);
-           	  			}
-
-           	  			if (count_sets == 0) {
-           	  				alert ("ANNDD YOUU AREEE THE CHAMMPIOOONN");
-           	  			}
              		 }
+
+                 if (count_reps == 0) {
+                      count_reps = {{reps}};
+                      $( ".reps").text(count_reps);
+                      count_sets = count_sets - 1;
+                      $( ".sets").text(count_sets);
+                    }
+
+                    if (count_sets == 0) {
+                      alert ("ANNDD YOUU AREEE THE CHAMMPIOOONN");
+                    }
            		 });
 				/*
 				myMyo.on('accelerometer', function(data){
@@ -139,21 +128,7 @@
 					  }
 				});*/
 
-		    myMyo.on('lock', function(){
-                myMyo.unlock();
-            });
-            
-            myMyo.on('pose', function(pose_name, edge) {
-              if (pose_name != 'rest' && edge) {
-                console.log('Started ', pose_name);
-              }
-              if (pose_name == 'wave_in' && edge) {
-                alert('good job (wave in)! ');
-              }
-              if (pose_name == 'wave_out' && edge) {
-                alert('good job (wave out)!');
-              }
-            });
+		    
 
             });
         </script>
