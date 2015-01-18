@@ -32,6 +32,7 @@
         <script>
            $(document).ready(function() {
 				var myMyo = Myo.create();
+				myMyo.unlock();
 				var bool = true;
 				var record = false;
 				var final = [];
@@ -130,7 +131,27 @@
 						  //console.log(result);
 					  }
 				});
+<<<<<<< HEAD
 				*/
+=======
+
+		    myMyo.on('lock', function(){
+                myMyo.unlock();
+            });
+            
+            myMyo.on('pose', function(pose_name, edge) {
+              if (pose_name != 'rest' && edge) {
+                console.log('Started ', pose_name);
+              }
+              if (pose_name == 'wave_in' && edge) {
+                alert('good job (wave in)! ');
+              }
+              if (pose_name == 'wave_out' && edge) {
+                alert('good job (wave out)!');
+              }
+            });
+
+>>>>>>> 51719729bf7130b114e03bc642bd50bd331d7dc3
             });
         </script>
     </body>
