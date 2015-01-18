@@ -129,28 +129,33 @@ img {
 }
 
 /* line 153, ../scss/main.scss */
+.track {
+  margin-bottom: 5%;
+}
+
+/* line 157, ../scss/main.scss */
 #sets, #reps {
   display: inline-block;
   text-align: center;
 }
 
-/* line 158, ../scss/main.scss */
+/* line 162, ../scss/main.scss */
 #sets {
   margin-right: 1em;
 }
 
-/* line 162, ../scss/main.scss */
+/* line 166, ../scss/main.scss */
 #reps {
   margin-left: 1em;
 }
 
-/* line 166, ../scss/main.scss */
+/* line 170, ../scss/main.scss */
 .val-title {
   font-size: 150%;
   margin: 0;
 }
 
-/* line 171, ../scss/main.scss */
+/* line 175, ../scss/main.scss */
 .sets, .reps {
   margin: 0;
   font-size: 800%;

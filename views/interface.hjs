@@ -41,14 +41,6 @@
 				Stop
 			</div>
 		</div>
-		<div>
-			<p class="sets"></p>
-			<p class= "reps"></p>
-		</div>
-		
-		<form action='/twilio' method='post'>
-			<input type='submit' value="Text!">
-		</form>
   
          <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
         <script src="js/myo.js"></script>
@@ -61,8 +53,8 @@
 				var final = [];
 				var accFinal = [];
 
-        $("#wd").css("visibility", "hidden");
-        $("#wu").css("visibility", "hidden");
+				$("#wd").css("display", "none");
+				$("#wu").css("display", "none");
 
 
 
@@ -101,9 +93,11 @@
 
           	 	   if (pose_name == 'wave_in' && edge) {
            	  	   	console.log('good job (wave in)! ');
-                    $("#wd").css("visibility", "visible");
-                    $("#wu").css("visibility", "hidden");
-
+                    $("#wd").css("display", "initial");
+					$("#wu").css("display", "none");
+					if ($("#wd").css("display") === "initial") {
+						$("#wd").delay(1000).css("display", "none");
+					}
            	  	   if (count == 0) {
            	  	   	count = 1;
            	  	   }
@@ -117,8 +111,11 @@
             	  }
             		if (pose_name == 'wave_out' && edge) {
              	   		console.log('good job (wave out)!');
-                    $("#wu").css("visibility", "visible");
-                    $("#wd").css("visibility", "hidden");
+                    $("#wu").css("display", "initial");
+					$("#wd").css("display", "none");
+					if ($("#wu").css("display") === "initial") {
+						$("#wu").delay(1000).css("display", "none");
+					}
              	   		if (count == 0) {
            	  	   			count = 2;
            	  	   		}
