@@ -10,7 +10,7 @@
 		<p class="slogan">Treat yourself right</p>
 		
 		<!-- error message-->
-		<p>Congrats! You finished for today. No one's getting an unhappy text today :) Keep up the good work!</p>
+		<p class="congrats">Congrats! You finished for today. No one's getting an unhappy text today :) Keep up the good work!</p>
          <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 
     </body>
