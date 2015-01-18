@@ -19,7 +19,7 @@
             Stop
         </div>
 		<div>
-			<p>{{ sets }}</p>
+			<p class="sets"></p>
 			<br>
 			<p>{{ reps }}</p>
 		</div>
@@ -38,6 +38,7 @@
 				var final = [];
 				var accFinal = [];
 
+			   	$( ".sets").text( {{ sets }} );
 				$( "#start" ).click(function() {
 					record = true;
 					alert("strt");
