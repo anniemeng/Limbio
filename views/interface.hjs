@@ -105,9 +105,6 @@
                       $( ".reps").text(count_reps);
                       count_sets = count_sets - 1;
                       $( ".sets").text(count_sets);
-                      var restWindow = window.open("", "Instructions", "width=300, height=200");
-                      restWindow.document.write("<p> Please wait three minutes before continuing onto the next set. </p>");
-                       setTimeout(function(){ restWindow.close()}, 180000);
                     }
 
                     if (count_sets == 0) {
