@@ -74,6 +74,12 @@ router.post('/contact', function(req, res) {
 });
 
 //TWILIO
-
+/*router.post('/twilio', function(req, res) {
+	client.messages.create({
+		body: "THEY DIDN'T REHABILITATE"
+	}, function(err, message) { 
+		console.log(message.sid); 
+	});
+});*/
 
 module.exports = router;

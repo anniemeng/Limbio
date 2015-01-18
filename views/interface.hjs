@@ -84,9 +84,7 @@
            	  	   	console.log('good job (wave in)! ');
                     $("#wd").css("display", "initial");
 					$("#wu").css("display", "none");
-					if ($("#wd").css("display") === "initial") {
-						$("#wd").delay(500).css("display", "none");
-					}
+					$("#wd").delay(500).css("display", "none");
            	  	   if (count == 0) {
            	  	   	count = 1;
            	  	   }
@@ -102,9 +100,7 @@
              	   		console.log('good job (wave out)!');
                     $("#wu").css("display", "initial");
 					$("#wd").css("display", "none");
-					if ($("#wu").css("display") === "initial") {
-						$("#wu").delay(500).css("display", "none");
-					}
+					$("#wu").delay(500).css("display", "none");
              	   		if (count == 0) {
            	  	   			count = 2;
            	  	   		}
