@@ -62,10 +62,12 @@ select {
   margin-bottom: 1em;
 }
 
-/* line 94, ../scss/main.scss */
+/* line 96, ../scss/main.scss */
 form[action="/set"] > *,
 form[action="/contact"] > *,
-form[action="/twilio"] > * {
+form[action="/twilio-alarm"] > *,
+form[action="/twilio-warning"] > *,
+form[action="/twilio-notify"] > * {
   -webkit-box-shadow: 0 0 6px #9dcfe0;
   -moz-box-shadow: 0 0 5px #9dcfe0;
   box-shadow: 0 0 5px #9dcfe0;
@@ -80,77 +82,102 @@ form[action="/twilio"] > * {
   border-radius: 5px;
   outline: none;
 }
-/* line 110, ../scss/main.scss */
+/* line 112, ../scss/main.scss */
 form[action="/set"] > *:focus,
 form[action="/contact"] > *:focus,
-form[action="/twilio"] > *:focus {
+form[action="/twilio-alarm"] > *:focus,
+form[action="/twilio-warning"] > *:focus,
+form[action="/twilio-notify"] > *:focus {
   -webkit-box-shadow: 0 0 6px #75d4ef;
   -moz-box-shadow: 0 0 5px #75d4ef;
   box-shadow: 0 0 5px #75d4ef;
 }
 
-/* line 117, ../scss/main.scss */
+/* line 119, ../scss/main.scss */
+.text {
+  clear: both;
+}
+
+/* line 125, ../scss/main.scss */
+form[action="/twilio-alarm"],
+form[action="/twilio-warning"],
+form[action="/twilio-notify"] {
+  display: inline-block;
+}
+
+/* line 129, ../scss/main.scss */
+form[action="/twilio-warning"] {
+  margin-left: 1em;
+  margin-right: 1em;
+}
+
+/* line 134, ../scss/main.scss */
 input[type="submit"] {
   background: #a7b0b2;
   color: #fff;
   padding: 0.5em 1em;
 }
-/* line 122, ../scss/main.scss */
+/* line 139, ../scss/main.scss */
 input[type="submit"]:hover {
   background: #fff;
   color: #a7b0b2;
   transition: 0.5s;
 }
 
-/* line 130, ../scss/main.scss */
+/* line 147, ../scss/main.scss */
 #testing > * {
   display: inline-block;
 }
 
-/* line 134, ../scss/main.scss */
+/* line 151, ../scss/main.scss */
 #testing {
   clear: both;
 }
 
-/* line 138, ../scss/main.scss */
+/* line 155, ../scss/main.scss */
 #start {
   margin-right: 0.5em;
 }
 
-/* line 143, ../scss/main.scss */
+/* line 160, ../scss/main.scss */
 .track, .reminder {
   float: left;
   width: 40%;
 }
 
-/* line 148, ../scss/main.scss */
+/* line 165, ../scss/main.scss */
 img {
   width: 400px;
 }
 
-/* line 153, ../scss/main.scss */
+/* line 170, ../scss/main.scss */
+.track {
+  margin-bottom: 10%;
+}
+
+/* line 174, ../scss/main.scss */
 #sets, #reps {
   display: inline-block;
   text-align: center;
 }
 
-/* line 158, ../scss/main.scss */
+/* line 179, ../scss/main.scss */
 #sets {
   margin-right: 1em;
 }
 
-/* line 162, ../scss/main.scss */
+/* line 183, ../scss/main.scss */
 #reps {
   margin-left: 1em;
 }
 
-/* line 166, ../scss/main.scss */
+/* line 187, ../scss/main.scss */
 .val-title {
   font-size: 150%;
   margin: 0;
 }
 
-/* line 171, ../scss/main.scss */
+/* line 192, ../scss/main.scss */
 .sets, .reps {
   margin: 0;
   font-size: 800%;
