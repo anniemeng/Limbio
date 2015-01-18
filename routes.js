@@ -35,6 +35,14 @@ router.get('/interface', function(req, res) {
   });
 });
 
+// contact consequence
+router.get('/finish', function(req, res) {
+  return res.render('finish', {
+    title: 'Rehabilitate'
+  });
+});
+
+
 // settings form
 router.post('/set', function(req, res) {
   // require

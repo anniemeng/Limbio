@@ -194,6 +194,7 @@
 
                     if (count_sets == 1 && count_reps == 0) {
                       alert ("ANNDD YOUU AREEE THE CHAMMPIOOONN");
+					  window.location.href="/finish";
                     }
            		 });
 
