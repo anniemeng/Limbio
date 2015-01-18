@@ -1,13 +1,15 @@
 var express = require('express');
 var router = express.Router();
 
+//require the Twilio module and create a REST client 
+	var client = require('twilio')(accountSid, authToken); 
 // settings
 router.get('/', function(req, res) {
 	
   // skip setup
-  if (req.session.settings && req.session.contacts) {
+  /*if (req.session.settings && req.session.contacts) {
     return res.redirect('/interface');
-  }
+  }*/
 	
   return res.render('index', {
     title: 'Rehabilitate'
@@ -21,10 +23,11 @@ router.get('/contact', function(req, res) {
   });
 });
 
+
 // myo interface
 router.get('/interface', function(req, res) {
-  return res.render('interface', {
-    title: 'Rehabilitate'
+    return res.render('interface', {
+    title: 'Rehabilitate',
   });
 });
 
@@ -64,6 +67,18 @@ router.post('/contact', function(req, res) {
 
   req.session.message = 'Contact saved!';
   return res.redirect('/interface');
+});
+
+//TWILIO
+router.post('/twilio', function(req, res) {
+	client.messages.create({
+		body: "you need to rehabilitate!"
+	}, function(err, message) { 
+		console.log(message.sid); 
+	});
+	
+	req.session.message = 'sent message!';
+    return res.redirect('/interface');
 });
 
 module.exports = router;

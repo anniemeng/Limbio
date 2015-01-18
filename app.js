@@ -18,11 +18,12 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use(function(req, res, next) {
-  if (req.session.message) {
+  
+ if (req.session.message) {
     res.locals.message = req.session.message;
     req.session.message = null;
   }
-
+	  
   if (!req.session.settings) {
     req.session.settings = [];
   }
@@ -36,6 +37,7 @@ app.use(function(req, res, next) {
 
 var routes = require('./routes');
 app.use('/', routes);
+
 
 // If no routes activated by now, catch the 404 and forward to error handler
 app.use(function(req, res, next) {
