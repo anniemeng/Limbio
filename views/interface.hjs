@@ -190,6 +190,7 @@
 
                     if (count_sets == 0) {
                       alert ("ANNDD YOUU AREEE THE CHAMMPIOOONN");
+					  window.location.href="/finish";
                     }
            		 });
 
