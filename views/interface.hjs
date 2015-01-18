@@ -25,8 +25,8 @@
 			<p class="sets"></p>
 			<p class= "reps"></p>
 		</div>
-    <img src="img/wrist_up.jpg">
-    <img src="img/wrist_down.jpg">
+    <img src="img/wrist_up.png">
+    <img src="img/wrist_down.png">
 		<form action='/twilio' method='post'>
 			<input type='submit' value="Text!">
 		</form>
