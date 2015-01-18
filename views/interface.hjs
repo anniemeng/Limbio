@@ -35,14 +35,8 @@
 
 
     <div id = "manual"> 
-      <img src="img/wrist_move.gif">
+      <!--<img src="img/wrist_move.gif">-->
       <p > Bend your wrist up AND down to count for one repetition.</p>
-    </div>
-
-    <div class = "hider">
-		<form action='/twilio' method='post'>
-			<input type='submit' value="Text!">
-		</form>
     </div>
 
 		<!--<div id="testing">
@@ -53,7 +47,7 @@
 				Stop
 			</div>
 		</div>-->
-		
+		<div class="hider">
 		<div class="text">
 			<form action='/twilio-alarm' method='post'>
 				<input type='submit' value="Text Alarm Demo">
@@ -64,6 +58,7 @@
 			<form action='/twilio-notify' method='post'>
 				<input type='submit' value="Text Notify Demo">
 			</form>
+		</div>
 		</div>
 
   
@@ -129,9 +124,9 @@
 				
 
 				myMyo.on('pose', function(pose_name, edge) {
-            	  if (pose_name != 'rest' && edge) {
-          	      console.log('Started ', pose_name);
-          	    	}
+					if (pose_name != 'rest' && edge) {
+						console.log('Started ', pose_name);
+					}
 
           	    	if ("{{name}}" === "fist-grip" && pose_name == 'fist' && edge) {
           	    		console.log('good job (fist)! ');
