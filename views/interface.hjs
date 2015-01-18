@@ -2,6 +2,7 @@
 <html lang="en">
     <head>
         <title>{{ title }}</title>
+		<style href="../public/css/normalize.css"></style>
     </head>
     <body>
         <h1>Rehabilitate</h1>
