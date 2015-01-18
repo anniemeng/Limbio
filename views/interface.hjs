@@ -28,10 +28,6 @@
 			<img id="wd" src="img/wrist_down.png">
 		</div>
 
-		<form action='/twilio' method='post'>
-			<input type='submit' value="Text!">
-		</form>
-
 		<div id="testing">
 			<div id="start">
 				Start
@@ -68,7 +64,7 @@
 				$("#wd").css("display", "none");
 				$("#wu").css("display", "none");
 
-        		$( ".name").text( {{ name }} );
+        		$( ".name").text( "{{ name }}" );
 
 			   	$( ".sets").text( {{ sets }} );
 

@@ -31,7 +31,7 @@ router.get('/interface', function(req, res) {
     title: 'Rehabilitate',
 	sets: req.session.settings[num - 1].sets,
 	reps: req.session.settings[num - 1].reps,
-  name: req.session.settings[num - 1].name
+    name: req.session.settings[num - 1].name
   });
 });
 
