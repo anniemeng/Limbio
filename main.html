@@ -3,7 +3,7 @@
     <head>
     </head>
     <body>
-        <h1>hello rehab </h1>
+        <h1> {{ title }} </h1>
         
         <div id="start">
             Start
@@ -18,7 +18,10 @@
         <script>
             
             $(document).ready(function() {
+
             var myMyo = Myo.create();
+                        myMyo.unlock();
+
             var bool = true;
             var record = false;
             var final = [];
@@ -57,7 +60,7 @@
                   }
             });*/
                 
-            myMyo.on('accelerometer', function(data){
+            /*myMyo.on('accelerometer', function(data){
                 //console.log("acc");
                   if (record) {
                       var ax = data.x;
@@ -69,8 +72,23 @@
                       accFinal.push(acc);
                       //console.log(result);
                   }
+            });*/
+            myMyo.on('lock', function(){
+                myMyo.unlock();
             });
-        
+            
+            myMyo.on('pose', function(pose_name, edge) {
+              if (pose_name != 'rest' && edge) {
+                console.log('Started ', pose_name);
+              }
+              if (pose_name == 'wave_in' && edge) {
+                alert('good job (wave in)! ');
+              }
+              if (pose_name == 'wave_out' && edge) {
+                alert('good job (wave out)!');
+              }
+            });
+
             });
         </script>
     </body>
