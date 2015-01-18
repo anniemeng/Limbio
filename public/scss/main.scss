@@ -50,6 +50,7 @@ h1 {
 	font-size: 600%;
 	margin-top: 0.2em;
 	margin-bottom:0;
+    margin-left: -0.7%;
 }
 
 // INDEX STYLING
@@ -66,6 +67,7 @@ select {
 	padding: 0.5em;
 }
 
+// CONTACT AND LANDING FORM
 #form {
 	border-radius: 10px;
 	padding: 0.3em 0;
@@ -79,7 +81,9 @@ select {
 	}
 }
 
-form[action="/set"] > * {
+form[action="/set"] > *,
+form[action="/contact"] > *,
+form[action="/twilio"] > * {
 	-webkit-box-shadow:0 0 6px $form-light;
   	-moz-box-shadow:0 0 5px $form-light;
   	box-shadow:0 0 5px $form-light;
@@ -112,4 +116,23 @@ input[type="submit"] {
 		color: $silver;
 		transition: 0.5s;
 	}
+}
+
+// INTERFACE
+#testing > * {
+	display: inline-block;
+}
+
+.sets, .reps {
+	display: inline-block;
+	font-size: 500%;
+}
+
+.sets, 
+#start {
+	margin-right: 0.5em;
+}
+
+.reps {
+	margin-left: 0.5em;
 }
