@@ -7,7 +7,6 @@
     <link rel="stylesheet" href="css/animate.min.css">
     </head>
     <body>
-      <div class = "hider">
         <h1>Rehabilitate</h1>
 		<p class="exercise"><strong>Now doing:</strong> <span id="name-exer">{{name}}</span></p>
 
@@ -31,7 +30,6 @@
 			<img id="wu" src="img/wrist_up.png">
 			<img id="wd" src="img/wrist_down.png">
 		</div>
-  </div>
 
 
     <div id = "manual"> 
@@ -47,7 +45,6 @@
 				Stop
 			</div>
 		</div>-->
-		<div class="hider">
 		<div class="text">
 			<form action='/twilio-alarm' method='post'>
 				<input type='submit' value="Text Alarm Demo">
@@ -58,7 +55,6 @@
 			<form action='/twilio-notify' method='post'>
 				<input type='submit' value="Text Notify Demo">
 			</form>
-		</div>
 		</div>
 
   
@@ -91,7 +87,6 @@
 				myMyo.unlock();
 				var bool = true;
 				var record = false;
-				var final = [];
 				var accFinal = [];
 
 				$("#wd").css("display", "none");
@@ -126,6 +121,9 @@
 				myMyo.on('pose', function(pose_name, edge) {
 					if (pose_name != 'rest' && edge) {
 						console.log('Started ', pose_name);
+						console.log("{{name}}" === "wrist-flex");
+						console.log("{{name}}" == "wrist-flex");
+						console.log("{{name}}");
 					}
 
           	    	if ("{{name}}" === "fist-grip" && pose_name == 'fist' && edge) {
@@ -193,20 +191,6 @@
                       alert ("ANNDD YOUU AREEE THE CHAMMPIOOONN");
                     }
            		 });
-				/*
-				myMyo.on('accelerometer', function(data){
-					//console.log("acc");
-					  if (record) {
-						  var ax = data.x;
-						  var ay = data.y;
-						  var az = data.z;
-
-						  // calculate data
-						  var acc = [ax, ay, az];
-						  accFinal.push(acc);
-						  //console.log(result);
-					  }
-				});*/
 
             });
         </script>
