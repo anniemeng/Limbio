@@ -2,7 +2,7 @@ var express = require('express');
 var router = express.Router();
 
 //require the Twilio module and create a REST client 
-	var client = require('twilio')(accountSid, authToken); 
+	//var client = require('twilio')(accountSid, authToken); 
 // settings
 router.get('/', function(req, res) {
 	
