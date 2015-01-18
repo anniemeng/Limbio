@@ -1,6 +1,5 @@
 var express = require('express');
 var router = express.Router();
-
 //require the Twilio module and create a REST client 
 //var client = require('twilio')(accountSid, authToken); 
 // settings
@@ -12,7 +11,7 @@ router.get('/', function(req, res) {
   }*/
 	
   return res.render('index', {
-    title: 'Rehabilitate'
+    title: 'Limbio'
   });
 });
 
@@ -116,23 +115,5 @@ router.post('/twilio-notify', function(req, res) {
 
     return res.redirect('/interface');
 }); */
-
-// POSTMATES
-/*router.post('/postmate', function(req, res) {
-	var url = 'https://api.postmates.com';
-	var quote = '/v1/customers/:customer_id/delivery_quotes';
-	getJSON(user, function(json) {
-		console.log(json);
-	});
-});
-
-function getJSON(url, callback) {
-	  $.ajax({
-		url: url,
-		complete: function(xhr) {
-		  callback.call(null, xhr.responseJSON);
-		}
-	  });
-}*/
 
 module.exports = router;
