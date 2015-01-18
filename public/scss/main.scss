@@ -4,30 +4,11 @@ $light-g: #e5e8ec;
 $form-light: rgb(157,207,224);
 $form: rgb(117, 212, 239);
 
-// More colors
-$indigo: #0d3d56;
-$sophia: #0f5b78;
-$skye:   #117899;
-$alice:  #1496bb;
-$jade:   #5ca794;
-$kelly:  #50b121;
-$daisy:  #ebc944;
-$amber:  #edaa38;
-$april:  #f08c2d;
-$coral:  #f26d21;
-$rowan:  #d94e20;
-$ruby:   #c02f1d;
-
-// More grays
-$jet:    #131516;
+// gray
 $raven:  #373d3f;
 $asher:  #555f61;
-$stone:  #707c80;
 $gray:   #8c979a;
 $silver: #a7b0b2;
-$heather:#c1c7c9;
-$pearl:  #dadedf;
-$lilia:  #f2f3f4; 
 
 // ALL
 input[type=number]::-webkit-inner-spin-button,
@@ -169,6 +150,23 @@ img {
 //TRACKING INFO
 .track {
 	margin-bottom: 10%;
+}
+
+.slogan-inter {
+	margin-top: 0;
+	margin-bottom: 0;
+	font-size: 200%;
+}
+
+.exercise {
+	margin-top: 1%;
+	margin-bottom: 5%;
+	font-size: 150%;
+	text-transform: uppercase;
+}
+
+#name-exer {
+	color: $gray;
 }
 
 #sets, #reps {

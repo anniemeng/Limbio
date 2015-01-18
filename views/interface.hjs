@@ -7,16 +7,14 @@
     </head>
     <body>
         <h1>Rehabilitate</h1>
-        <p class="slogan">Treat yourself right</p>
-
-		<div class="excercise">{{name}}</div>
+		<p class="exercise"><strong>Now doing:</strong> <span id="name-exer">{{name}}</span></p>
 
 		{{#message}}
       		<p class="msg">{{message}}<p>
     	{{/message}}
 		
-		<p class="timer"></p>
 		<div class="track">
+			<p class="timer"></p>
 			<div id="sets">
 				<p class="val-title">Sets</p>
 				<p class="sets"></p>
@@ -32,14 +30,14 @@
 			<img id="wd" src="img/wrist_down.png">
 		</div>
 
-		<div id="testing">
+		<!--<div id="testing">
 			<div id="start">
 				Start
 			</div>
 			<div id="stop">
 				Stop
 			</div>
-		</div>
+		</div>-->
 		
 		<div class="text">
 			<form action='/twilio-alarm' method='post'>
@@ -66,8 +64,6 @@
 
 				$("#wd").css("display", "none");
 				$("#wu").css("display", "none");
-
-        		$( ".name").text( "{{ name }}" );
 
 			   	$( ".sets").text( {{ sets }} );
 
@@ -100,13 +96,14 @@
           	      console.log('Started ', pose_name);
           	    	}
 
-          	    	if ("{{name}}" == "Fist Grip" && pose_name == 'fist' && edge) {
+          	    	if ("{{name}}" === "fist-grip" && pose_name == 'fist' && edge) {
           	    		console.log('good job (fist)! ');
           	    		count_reps = count_reps - 1;
           	    		$( ".reps").text(count_reps);
+						// to do add sets
           	    	}
           	    	
-          	    	if ("{{name}}" == "Wrist Flex") {
+          	    	else if ("{{name}}" === "wrist-flex") {
           	    		if (pose_name == 'wave_in' && edge) {
 		           	  	   	console.log('good job (wave in)! ');
 		                    $("#wd").css("display", "initial");
@@ -123,7 +120,8 @@
 			           	  	}
 
             	  		}
-	            		if (pose_name == 'wave_out' && edge) {
+	            		
+						else if (pose_name == 'wave_out' && edge) {
 	             	   		console.log('good job (wave out)!');
 		                    $("#wu").css("display", "initial");
 							$("#wd").css("display", "none");
