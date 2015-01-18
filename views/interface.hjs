@@ -8,7 +8,9 @@
     <body>
         <h1>Rehabilitate</h1>
         <p class="slogan">Treat yourself right</p>
-		
+
+		<div class="excercise">{{name}}</div>
+
 		{{#message}}
       		<p class="msg">{{message}}<p>
     	{{/message}}
@@ -98,37 +100,45 @@
           	      console.log('Started ', pose_name);
           	    	}
 
-          	 	   if (pose_name == 'wave_in' && edge) {
-           	  	   	console.log('good job (wave in)! ');
-                    $("#wd").css("display", "initial");
-					$("#wu").css("display", "none");
-					$("#wd").delay(500).css("display", "none");
-           	  	   if (count == 0) {
-           	  	   	count = 1;
-           	  	   }
+          	    	if ("{{name}}" == "Fist Grip" && pose_name == 'fist' && edge) {
+          	    		console.log('good job (fist)! ');
+          	    		count_reps = count_reps - 1;
+          	    		$( ".reps").text(count_reps);
+          	    	}
+          	    	
+          	    	if ("{{name}}" == "Wrist Flex") {
+          	    		if (pose_name == 'wave_in' && edge) {
+		           	  	   	console.log('good job (wave in)! ');
+		                    $("#wd").css("display", "initial");
+							$("#wu").css("display", "none");
+							$("#wd").delay(500).css("display", "none");
+			           	  	if (count == 0) {
+			           	  		count = 1;
+			           	  	}
 
-           	  	   if (count == 2) {
-           	  	   		count = 0;
-           	  	   		count_reps = count_reps - 1;
-           	  	   		$( ".reps").text(count_reps);
-           	  		}
+			           	  	if (count == 2) {
+			           	  	   	count = 0;
+			           	  	   	count_reps = count_reps - 1;
+			           	  	   	$( ".reps").text(count_reps);
+			           	  	}
 
-            	  }
-            		if (pose_name == 'wave_out' && edge) {
-             	   		console.log('good job (wave out)!');
-                    $("#wu").css("display", "initial");
-					$("#wd").css("display", "none");
-					$("#wu").delay(500).css("display", "none");
-             	   		if (count == 0) {
-           	  	   			count = 2;
-           	  	   		}
+            	  		}
+	            		if (pose_name == 'wave_out' && edge) {
+	             	   		console.log('good job (wave out)!');
+		                    $("#wu").css("display", "initial");
+							$("#wd").css("display", "none");
+							$("#wu").delay(500).css("display", "none");
+		             	   	if (count == 0) {
+		           	  	   		count = 2;
+		           	  	   	}
 
-           	  	  	 	if (count == 1) {
-           	  	  		 count = 0;
-           	  	   			count_reps = count_reps - 1;
-           	  	   			$( ".reps").text(count_reps);
-           	  			}
-             		 }
+		           	  	  	if (count == 1) {
+		           	  	  	count = 0;
+		           	  	   	count_reps = count_reps - 1;
+		           	  	   	$( ".reps").text(count_reps);
+		           	  		}
+	             		}
+          	    	}
 
                     if (count_reps == 0 && count_sets != 0) {
                       count_sets = count_sets - 1;

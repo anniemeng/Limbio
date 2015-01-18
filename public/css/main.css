@@ -39,6 +39,12 @@ h1 {
   margin-bottom: 5%;
 }
 
+.excercise {
+  margin-top: 0;
+  font-size: 175%;
+  margin-bottom: 5%;
+}
+
 /* line 70, ../scss/main.scss */
 select {
   -webkit-appearance: none;
