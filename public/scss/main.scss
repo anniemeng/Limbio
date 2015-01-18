@@ -138,7 +138,12 @@ input[type="submit"] {
 }
 
 // split screen
-.track, .reminder{
+.track {
+	float:left;
+	width: 50%;
+}
+
+.reminder {
 	float:left;
 	width: 40%;
 }
