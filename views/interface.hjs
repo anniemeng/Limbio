@@ -46,8 +46,8 @@
 				var count_sets = {{sets}} ;
 				var count_reps = {{ reps }} ;
 
-			   	$( ".sets").text(count_sets);
-			   	$( ".reps").text(count_reps);
+			   	$( ".sets").text("Sets left: " + count_sets);
+			   	$( ".reps").text("Reps left: " + count_reps);
 
 				$( "#start" ).click(function() {
 					record = true;
@@ -81,7 +81,7 @@
            	  	   if (count == 2) {
            	  	   		count = 0;
            	  	   		count_reps = count_reps - 1;
-           	  	   		$( ".reps").text(count_reps);
+           	  	   		$( ".reps").text("Reps left: " + count_reps);
            	  		}
 
             	  }
@@ -94,18 +94,26 @@
            	  	  	 	if (count == 1) {
            	  	  		 count = 0;
            	  	   			count_reps = count_reps - 1;
-           	  	   			$( ".reps").text(count_reps);
+           	  	   			$( ".reps").text("Reps left: " + count_reps);
            	  			}
              		 }
 
-                 if (count_reps == 0) {
-                      count_reps = {{reps}};
-                      $( ".reps").text(count_reps);
+                    if (count_reps == 0 && count_sets != 0) {
                       count_sets = count_sets - 1;
-                      $( ".sets").text(count_sets);
-                      var restWindow = window.open("", "Instructions", "width=300, height=200");
-                      restWindow.document.write("<p> Please wait three minutes before continuing onto the next set. </p>");
-                       setTimeout(function(){ restWindow.close()}, 180000);
+                      $( ".sets").text("Sets left: " + count_sets);
+
+                      if (count_sets != 0) {
+                      	count_reps = {{ reps }};
+                      	$( ".reps").text("Reps left: " + count_reps);
+	                      $( ".reps").text("Congrats, you have finished a set! Please wait 3 minutes before begining the next set.");
+	                      var time = 3000;
+	                      setTimeout(function(){ $( ".reps").text("Countdown: 3");}, time);
+	                      setTimeout(function(){ $( ".reps").text("Countdown: 2");}, time + 1000);
+	                      setTimeout(function(){ $( ".reps").text("Countdown: 1");}, time + 2000);
+	                      setTimeout(function(){ $( ".reps").text("Ready, Go!");}, time + 3000);
+	                      setTimeout(function(){ $( ".reps").text(count_reps);}, time + 4000);
+                  	}
+
                     }
 
                     if (count_sets == 0) {
