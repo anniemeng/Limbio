@@ -14,8 +14,8 @@
 		<h3>Choose your fuel</h3>
         <form action='/set' method='post'>
 			<select name="type">
-				<option value="arm-up">Arm-up</option>
-			    <option value="arm-side">Arm-down</option>
+				<option value="wrist-ud">Wrist Up-Down</option>
+			    <option value="fist">Fist</option>
 			</select>
 		  <input type='number' name='sets' placeholder='# of sets'>
 		  <input type='number' name='reps' placeholder='# of reps'>

@@ -8,7 +8,6 @@
     <body>
         <h1>Rehabilitate</h1>
         <p class="slogan">Treat yourself right</p>
-		<!-- error message-->
 		{{#message}}
       		<p class="msg">{{message}}<p>
     	{{/message}}
@@ -28,10 +27,19 @@
 			<img id="wu" src="img/wrist_up.png">
 			<img id="wd" src="img/wrist_down.png">
 		</div>
-
-		<form action='/twilio' method='post'>
-			<input type='submit' value="Text!">
-		</form>
+		
+		<!-- error message-->
+		<div class="text">
+			<form action='/twilio-alarm' method='post'>
+				<input type='submit' value="Text Alarm Demo">
+			</form>
+			<form action='/twilio-warning' method='post'>
+				<input type='submit' value="Text Warning Demo">
+			</form>
+			<form action='/twilio-notify' method='post'>
+				<input type='submit' value="Text Notify Demo">
+			</form>
+		</div>
   
          <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
         <script src="js/myo.js"></script>

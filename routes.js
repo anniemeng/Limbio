@@ -1,9 +1,8 @@
 var express = require('express');
 var router = express.Router();
 
-
 //require the Twilio module and create a REST client 
-	//var client = require('twilio')(accountSid, authToken); 
+//var client = require('twilio')(accountSid, authToken); 
 // settings
 router.get('/', function(req, res) {
 	
@@ -74,12 +73,41 @@ router.post('/contact', function(req, res) {
 });
 
 //TWILIO
-/*router.post('/twilio', function(req, res) {
+/*router.post('/twilio-alarm', function(req, res) {
 	client.messages.create({
-		body: "THEY DIDN'T REHABILITATE"
+		to: "+12673193238",
+		from: "+12673146330",
+		body: "Heya! 5 minutes till you move those muscles :)"
+	}, function(err, message) { 
+		console.log(message.sid);
+	});
+
+    return res.redirect('/interface');
+});
+
+
+router.post('/twilio-warning', function(req, res) {
+	client.messages.create({
+		to: "+12673193238",
+		from: "+12673146330",
+		body: "Uh oh, 10 minutes till you run out of time!"
 	}, function(err, message) { 
 		console.log(message.sid); 
 	});
-});*/
+	
+    return res.redirect('/interface');
+});
+
+router.post('/twilio-notify', function(req, res) {
+	client.messages.create({
+		to: "+12673193238",
+		from: "+12673146330",
+		body: "Sigh, you only needed a bit of effort! Notifying your buddy :("
+	}, function(err, message) { 
+		console.log(message.sid); 
+	});
+
+    return res.redirect('/interface');
+}); */
 
 module.exports = router;
