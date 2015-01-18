@@ -68,7 +68,7 @@
            $(document).ready(function() {
             
               
-              $(".hider").css("display", "none");
+              /*$(".hider").css("display", "none");
               $('#manual').addClass('animated fadeInRightBig');
 
 
@@ -84,7 +84,7 @@
                         $('.hider').css("display", 'initial');
                      }, 1200);
 
-              });
+              }); */
 
 
 				var myMyo = Myo.create();
