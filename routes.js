@@ -3,6 +3,12 @@ var router = express.Router();
 
 // settings
 router.get('/', function(req, res) {
+	
+  // skip setup
+  if (req.session.settings && req.session.contacts) {
+    return res.redirect('/interface');
+  }
+	
   return res.render('index', {
     title: 'Rehabilitate'
   });

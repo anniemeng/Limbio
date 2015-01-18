@@ -13,9 +13,13 @@
         <div id="stop">
             Stop
         </div>
+		<div id="text">
+			Text
+		</div>
   
          <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
         <script src="js/myo.js"></script>
+		<script src="js/contact.js"></script>
         <script>
            $(document).ready(function() {
 				var myMyo = Myo.create();
@@ -24,10 +28,15 @@
 				var final = [];
 				var accFinal = [];
 
+			   	$( "#text" ).click(function() {
+				   twilio();
+			    });
+			   
 				$( "#start" ).click(function() {
 					record = true;
 					alert("strt");
 				});
+			   
 
 				$( "#stop" ).click(function() {
 					record = false;

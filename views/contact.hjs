@@ -5,7 +5,7 @@
     </head>
     <body>
         <h1>Rehabilitate</h1>
-		
+		<h3>About someone you care about</h3>
 		<!-- error message-->
 		{{#message}}
       		<p>{{message}}<p>
