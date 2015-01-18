@@ -26,13 +26,20 @@ h1 {
 }
 
 /* line 57, ../scss/main.scss */
+.msg {
+  clear: both;
+  margin-bottom: 0;
+  color: #373d3f;
+}
+
+/* line 64, ../scss/main.scss */
 .slogan {
   margin-top: 0;
   font-size: 200%;
   margin-bottom: 5%;
 }
 
-/* line 63, ../scss/main.scss */
+/* line 70, ../scss/main.scss */
 select {
   -webkit-appearance: none;
   color: #a7b0b2;
@@ -40,7 +47,7 @@ select {
   padding: 0.5em;
 }
 
-/* line 71, ../scss/main.scss */
+/* line 78, ../scss/main.scss */
 #form {
   border-radius: 10px;
   padding: 0.3em 0;
@@ -49,12 +56,13 @@ select {
   margin: 0 auto;
   float: left;
 }
-/* line 79, ../scss/main.scss */
+/* line 86, ../scss/main.scss */
 #form h3 {
+  margin-top: 0;
   margin-bottom: 1em;
 }
 
-/* line 86, ../scss/main.scss */
+/* line 94, ../scss/main.scss */
 form[action="/set"] > *,
 form[action="/contact"] > *,
 form[action="/twilio"] > * {
@@ -72,7 +80,7 @@ form[action="/twilio"] > * {
   border-radius: 5px;
   outline: none;
 }
-/* line 102, ../scss/main.scss */
+/* line 110, ../scss/main.scss */
 form[action="/set"] > *:focus,
 form[action="/contact"] > *:focus,
 form[action="/twilio"] > *:focus {
@@ -81,65 +89,70 @@ form[action="/twilio"] > *:focus {
   box-shadow: 0 0 5px #75d4ef;
 }
 
-/* line 109, ../scss/main.scss */
+/* line 117, ../scss/main.scss */
 input[type="submit"] {
   background: #a7b0b2;
   color: #fff;
   padding: 0.5em 1em;
 }
-/* line 114, ../scss/main.scss */
+/* line 122, ../scss/main.scss */
 input[type="submit"]:hover {
   background: #fff;
   color: #a7b0b2;
   transition: 0.5s;
 }
 
-/* line 122, ../scss/main.scss */
+/* line 130, ../scss/main.scss */
 #testing > * {
   display: inline-block;
 }
 
-/* line 126, ../scss/main.scss */
-#test {
+/* line 134, ../scss/main.scss */
+#testing {
   clear: both;
 }
 
-/* line 130, ../scss/main.scss */
+/* line 138, ../scss/main.scss */
+#start {
+  margin-right: 0.5em;
+}
+
+/* line 143, ../scss/main.scss */
+.track, .reminder {
+  float: left;
+  width: 40%;
+}
+
+/* line 148, ../scss/main.scss */
+img {
+  width: 400px;
+}
+
+/* line 153, ../scss/main.scss */
 #sets, #reps {
   display: inline-block;
   text-align: center;
 }
 
-/* line 135, ../scss/main.scss */
+/* line 158, ../scss/main.scss */
 #sets {
   margin-right: 1em;
 }
 
-/* line 139, ../scss/main.scss */
+/* line 162, ../scss/main.scss */
 #reps {
   margin-left: 1em;
 }
 
-/* line 143, ../scss/main.scss */
+/* line 166, ../scss/main.scss */
 .val-title {
   font-size: 150%;
   margin: 0;
 }
 
-/* line 148, ../scss/main.scss */
+/* line 171, ../scss/main.scss */
 .sets, .reps {
   margin: 0;
   font-size: 700%;
   line-height: 1em;
-}
-
-/* line 154, ../scss/main.scss */
-#start {
-  margin-right: 0.5em;
-}
-
-/* line 158, ../scss/main.scss */
-img {
-  width: 200px;
-  height: 200px;
 }
