@@ -123,9 +123,9 @@
 
           	    	if ("{{name}}" === "fist-grip" && pose_name == 'fist' && edge) {
           	    		console.log('good job (fist)! ');
-          	    		if (count_reps > 0) {
-          	    			count_reps = count_reps - 1;
-          	    		}
+		           	  	   	if (count_reps > 0) {
+          	    			  count_reps = count_reps - 1;
+          	    			}
           	    		$( ".reps").text(count_reps);
 						// to do add sets
           	    	}
@@ -146,9 +146,9 @@
 
 			           	  	if (count == 2) {
 			           	  	   	count = 0;
-			           	  	   	if (count_reps > 0) {
-          	    					count_reps = count_reps - 1;
-          	    				}
+		           	  	   	if (count_reps > 0) {
+          	    			  count_reps = count_reps - 1;
+          	    			}
 			           	  	   	$( ".reps").text(count_reps);
 			           	  	}
 
@@ -172,28 +172,33 @@
 		           	  	   	if (count_reps > 0) {
           	    			  count_reps = count_reps - 1;
           	    			}
-		           	  	   	$( ".reps").text(count_reps);
+          	    			$( ".reps").text(count_reps);
 		           	  		}
 	             		}
           	    	}
+
+                    if (count_sets == 1 && count_reps == 0) {
+                      alert ("ANNDD YOUU AREEE THE CHAMMPIOOONN");
+					  window.location.href="/finish";
+                    }
 
                     if (count_reps == 0 && count_sets != 1) {
                       count_sets = count_sets - 1;
 
                       $( ".sets").text(count_sets);
 
-	                      // $( ".timer").text("Congrats, you have finished a set! Please wait 3 minutes before begining the next set.");
-	                      // var time = 5000;
-	                      // count_reps = {{ reps }}; 
-	                      // $( ".reps").text(count_reps);
-	                      // setTimeout(function(){ $( ".timer").text("Countdown: 3");}, time);
-	                      // setTimeout(function(){ $( ".timer").text("Countdown: 2");}, time + 1000);
-	                      // setTimeout(function(){ $( ".timer").text("Countdown: 1");}, time + 2000);
-	                      // setTimeout(function(){ $( ".timer").text("Ready, Go!");}, time + 3000);
+	                      $( ".timer").text("Congrats, you have finished a set! Please wait 3 minutes before begining the next set.");
+	                      var time = 5000;
+	                      count_reps = {{ reps }}; 
+	                      $( ".reps").text(count_reps);
 
+	                      setTimeout(function(){ $( ".timer").text("Countdown: 3");}, time);
+	                      setTimeout(function(){ $( ".timer").text("Countdown: 2");}, time + 1000);
+	                      setTimeout(function(){ $( ".timer").text("Countdown: 1");}, time + 2000);
+	                      setTimeout(function(){ $( ".timer").text("Ready, Go!");}, time + 3000);
+	                      
                       $( ".sets").text(count_sets);
                     }
-
 
                     if (count_sets == 1 && count_reps == 0) {
 					  window.location.href="/finish";
