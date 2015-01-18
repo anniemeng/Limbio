@@ -100,18 +100,46 @@ input[type="submit"]:hover {
 }
 
 /* line 126, ../scss/main.scss */
-.sets, .reps {
-  display: inline-block;
-  font-size: 500%;
+#test {
+  clear: both;
 }
 
-/* line 132, ../scss/main.scss */
-.sets,
+/* line 130, ../scss/main.scss */
+#sets, #reps {
+  display: inline-block;
+  text-align: center;
+}
+
+/* line 135, ../scss/main.scss */
+#sets {
+  margin-right: 1em;
+}
+
+/* line 139, ../scss/main.scss */
+#reps {
+  margin-left: 1em;
+}
+
+/* line 143, ../scss/main.scss */
+.val-title {
+  font-size: 150%;
+  margin: 0;
+}
+
+/* line 148, ../scss/main.scss */
+.sets, .reps {
+  margin: 0;
+  font-size: 700%;
+  line-height: 1em;
+}
+
+/* line 154, ../scss/main.scss */
 #start {
   margin-right: 0.5em;
 }
 
-/* line 136, ../scss/main.scss */
-.reps {
-  margin-left: 0.5em;
+/* line 158, ../scss/main.scss */
+img {
+  width: 200px;
+  height: 200px;
 }
