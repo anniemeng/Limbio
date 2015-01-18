@@ -67,8 +67,6 @@
 				$("#wd").css("display", "none");
 				$("#wu").css("display", "none");
 
-        		$( ".name").text( "{{ name }}" );
-
 			   	$( ".sets").text( {{ sets }} );
 
 				var count = 0;
