@@ -53,6 +53,13 @@ h1 {
     margin-left: -0.7%;
 }
 
+// messages
+.msg {
+	clear: both;
+	margin-bottom: 0;
+	color: $raven;
+}
+
 // INDEX STYLING
 .slogan {
 	margin-top: 0;
@@ -77,6 +84,7 @@ select {
 	float:left;
 	
 	h3 {
+		margin-top: 0;
 		margin-bottom: 1em;
 	}
 }
@@ -123,10 +131,25 @@ input[type="submit"] {
 	display: inline-block;
 }
 
-#test {
+#testing {
 	clear: both;
 }
 
+#start {
+	margin-right: 0.5em;
+}
+
+// split screen
+.track, .reminder{
+	float:left;
+	width: 40%;
+}
+
+img {
+	width: 400px;
+}
+
+//TRACKING INFO
 #sets, #reps {
 	display: inline-block;
 	text-align: center;
@@ -149,13 +172,4 @@ input[type="submit"] {
 	margin: 0;
 	font-size: 700%;
 	line-height:1em;
-}
- 
-#start {
-	margin-right: 0.5em;
-}
-
-img {
-	width: 200px;
-	height: 200px;
 }

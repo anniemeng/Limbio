@@ -10,10 +10,10 @@
         <p class="slogan">Treat yourself right</p>
 		<!-- error message-->
 		{{#message}}
-      		<p>{{message}}<p>
+      		<p class="msg">{{message}}<p>
     	{{/message}}
 		
-		<div>
+		<div class="track">
 			<div id="sets">
 				<p class="val-title">Sets</p>
 				<p class="sets"></p>
@@ -23,8 +23,11 @@
 				<p class="reps"></p>
 			</div>
 		</div>
-    <img src="img/wrist_up.jpg">
-    <img src="img/wrist_down.jpg">
+		
+		<div class="reminder">
+			<img src="img/wrist_up.png">
+			<img src="img/wrist_down.png">
+		</div>
 
 		<form action='/twilio' method='post'>
 			<input type='submit' value="Text!">
