@@ -21,7 +21,7 @@
 		<div>
 			<p class="sets"></p>
 			<br>
-			<p>{{ reps }}</p>
+			<p class= "reps"></p>
 		</div>
 		<form action='/twilio' method='post'>
 			<input type='submit' value="Text!">
@@ -39,7 +39,16 @@
 				var accFinal = [];
 
 
+
 			   	$( ".sets").text( {{ sets }} );
+
+				var count = 0;
+				var count_sets = {{sets}} ;
+				var count_reps = {{ reps }} ;
+
+			   	$( ".sets").text(count_sets);
+			   	$( ".reps").text(count_reps);
+
 				$( "#start" ).click(function() {
 					record = true;
 					// alert("start");
@@ -57,26 +66,65 @@
 					var resAcc = $.csv.fromArrays(accFinal);
 					console.log("ACCELERATION");
 					console.log(resAcc);
-				});
+				});	
 
-				/*myMyo.on('orientation', function(data){
-					  console.log("wtf");
-					  if (record) {
-						  var x = data.x;
-						  var y = data.y;
-						  var z = data.z;
-						  var w = data.w;
+				
 
-						  // calculate data
-						  var roll = Math.atan2(2*y*w - 2*x*z, 1 - 2*y*y - 2*z*z);
-						  var pitch = Math.atan2(2*(y*z + w*x), w*w - x*x - y*y + z*z);
-						  var yaw = Math.asin(2*x*y + 2*z*w);
-						  var result = [roll, pitch, yaw];
-						  final.push(result);
-						  //console.log(result);
-					  }
-				});*/
+				myMyo.on('pose', function(pose_name, edge) {
+            	  if (pose_name != 'rest' && edge) {
+          	      console.log('Started ', pose_name);
+          	    	}
 
+          	 	   if (pose_name == 'wave_in' && edge) {
+           	  	   	console.log('good job (wave in)! ');
+
+           	  	   if (count == 0) {
+           	  	   	count = 1;
+           	  	   }
+
+           	  	   if (count == 2) {
+           	  	   		count = 0;
+           	  	   		count_reps = count_reps - 1;
+           	  	   		$( ".reps").text(count_reps);
+           	  		}
+
+           	  		if (count_reps == 0) {
+           	  			count_reps = {{reps}};
+           	  			$( ".reps").text(count_reps);
+           	  			count_sets = count_sets - 1;
+           	  			$( ".sets").text(count_sets);
+           	  		}
+
+           	  		if (count_sets == 0) {
+           	  			alert ("ANNDD YOUU AREEE THE CHAMMPIOOONN");
+           	  		}
+
+            	  }
+            		if (pose_name == 'wave_out' && edge) {
+             	   		console.log('good job (wave out)!');
+             	   		if (count == 0) {
+           	  	   			count = 2;
+           	  	   		}
+
+           	  	  	 	if (count == 1) {
+           	  	  		 count = 0;
+           	  	   			count_reps = count_reps - 1;
+           	  	   			$( ".reps").text(count_reps);
+           	  			}
+
+           	  			if (count_reps == 0) {
+           	  				count_reps = {{reps}};
+           	  				$( ".reps").text(count_reps);
+           	  				count_sets = count_sets - 1;
+           	  				$( ".sets").text(count_sets);
+           	  			}
+
+           	  			if (count_sets == 0) {
+           	  				alert ("ANNDD YOUU AREEE THE CHAMMPIOOONN");
+           	  			}
+             		 }
+           		 });
+				/*
 				myMyo.on('accelerometer', function(data){
 					//console.log("acc");
 					  if (record) {
@@ -89,7 +137,7 @@
 						  accFinal.push(acc);
 						  //console.log(result);
 					  }
-				});
+				});*/
 
 		    myMyo.on('lock', function(){
                 myMyo.unlock();
