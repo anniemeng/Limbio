@@ -121,9 +121,6 @@
 				myMyo.on('pose', function(pose_name, edge) {
 					if (pose_name != 'rest' && edge) {
 						console.log('Started ', pose_name);
-						console.log("{{name}}" === "wrist-flex");
-						console.log("{{name}}" == "wrist-flex");
-						console.log("{{name}}");
 					}
 
           	    	if ("{{name}}" === "fist-grip" && pose_name == 'fist' && edge) {
@@ -138,7 +135,11 @@
 		           	  	   	console.log('good job (wave in)! ');
 		                    $("#wd").css("display", "initial");
 							$("#wu").css("display", "none");
-							$("#wd").delay(500).css("display", "none");
+
+							setTimeout( function(){
+                     	   		$('#wd').css("display", 'none');
+                     		}, 700);
+							//$("#wd").delay(500).css("display", "none");
 			           	  	if (count == 0) {
 			           	  		count = 1;
 			           	  	}
@@ -155,7 +156,11 @@
 	             	   		console.log('good job (wave out)!');
 		                    $("#wu").css("display", "initial");
 							$("#wd").css("display", "none");
-							$("#wu").delay(500).css("display", "none");
+
+							setTimeout( function(){
+                     	   		$('#wu').css("display", 'none');
+                     		}, 700);
+							//$("#wu").delay(500).css("display", "none");
 		             	   	if (count == 0) {
 		           	  	   		count = 2;
 		           	  	   	}
@@ -174,14 +179,15 @@
                       $( ".sets").text(count_sets);
 
                       if (count_sets != 0) {
-                      	count_reps = {{ reps }};
-                      	$( ".reps").text(count_reps);
 	                      $( ".timer").text("Congrats, you have finished a set! Please wait 3 minutes before begining the next set.");
-	                      var time = 3000;
+	                      var time = 5000;
+	                      count_reps = {{ reps }}; 
+	                      $( ".reps").text(count_reps);
 	                      setTimeout(function(){ $( ".timer").text("Countdown: 3");}, time);
 	                      setTimeout(function(){ $( ".timer").text("Countdown: 2");}, time + 1000);
 	                      setTimeout(function(){ $( ".timer").text("Countdown: 1");}, time + 2000);
 	                      setTimeout(function(){ $( ".timer").text("Ready, Go!");}, time + 3000);
+	                      //setTimeout(function() { count_reps = {{ reps }}; $( ".reps").text(count_reps);, time + 4000);
                   	}
 
                       $( ".sets").text(count_sets);
