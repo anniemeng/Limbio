@@ -8,9 +8,11 @@
     <body>
         <h1>Rehabilitate</h1>
         <p class="slogan">Treat yourself right</p>
+		
 		{{#message}}
       		<p class="msg">{{message}}<p>
     	{{/message}}
+		
 		<p class="timer"></p>
 		<div class="track">
 			<div id="sets">
@@ -37,7 +39,6 @@
 			</div>
 		</div>
 		
-		<!-- error message-->
 		<div class="text">
 			<form action='/twilio-alarm' method='post'>
 				<input type='submit' value="Text Alarm Demo">
