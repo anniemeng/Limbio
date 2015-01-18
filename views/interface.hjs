@@ -2,26 +2,27 @@
 <html lang="en">
     <head>
         <title>{{ title }}</title>
-		<style href="../public/css/normalize.css"></style>
+		<link rel="stylesheet" href="css/normalize.css"/>
+		<link rel="stylesheet" href="css/main.css"/>
     </head>
     <body>
         <h1>Rehabilitate</h1>
-		<a href="/">Back</a>
-        
+        <p class="slogan">Treat yourself right</p>
 		<!-- error message-->
 		{{#message}}
       		<p>{{message}}<p>
     	{{/message}}
 		
-		<div id="start">
-            Start
-        </div>
-        <div id="stop">
-            Stop
-        </div>
+		<div id="testing">
+			<div id="start">
+				Start
+			</div>
+			<div id="stop">
+				Stop
+			</div>
+		</div>
 		<div>
 			<p class="sets"></p>
-			<br>
 			<p class= "reps"></p>
 		</div>
     <img src="img/wrist_up.jpg">
