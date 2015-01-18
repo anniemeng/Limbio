@@ -1,12 +1,12 @@
 @import url(http://fonts.googleapis.com/css?family=Lato:300,100);
-/* line 34, ../scss/main.scss */
+/* line 15, ../scss/main.scss */
 input[type=number]::-webkit-inner-spin-button,
 input[type=number]::-webkit-outer-spin-button {
   -webkit-appearance: none;
   margin: 0;
 }
 
-/* line 39, ../scss/main.scss */
+/* line 20, ../scss/main.scss */
 body {
   margin-left: 3%;
   color: #fff;
@@ -16,7 +16,7 @@ body {
   background-size: cover;
 }
 
-/* line 48, ../scss/main.scss */
+/* line 29, ../scss/main.scss */
 h1 {
   text-transform: uppercase;
   font-size: 600%;
@@ -25,27 +25,21 @@ h1 {
   margin-left: -0.7%;
 }
 
-/* line 57, ../scss/main.scss */
+/* line 38, ../scss/main.scss */
 .msg {
   clear: both;
   margin-bottom: 0;
   color: #373d3f;
 }
 
-/* line 64, ../scss/main.scss */
+/* line 45, ../scss/main.scss */
 .slogan {
   margin-top: 0;
   font-size: 200%;
   margin-bottom: 5%;
 }
 
-.excercise {
-  margin-top: 0;
-  font-size: 175%;
-  margin-bottom: 5%;
-}
-
-/* line 70, ../scss/main.scss */
+/* line 51, ../scss/main.scss */
 select {
   -webkit-appearance: none;
   color: #a7b0b2;
@@ -53,7 +47,7 @@ select {
   padding: 0.5em;
 }
 
-/* line 78, ../scss/main.scss */
+/* line 59, ../scss/main.scss */
 #form {
   border-radius: 10px;
   padding: 0.3em 0;
@@ -62,13 +56,13 @@ select {
   margin: 0 auto;
   float: left;
 }
-/* line 86, ../scss/main.scss */
+/* line 67, ../scss/main.scss */
 #form h3 {
   margin-top: 0;
   margin-bottom: 1em;
 }
 
-/* line 96, ../scss/main.scss */
+/* line 77, ../scss/main.scss */
 form[action="/set"] > *,
 form[action="/contact"] > *,
 form[action="/twilio-alarm"] > *,
@@ -88,7 +82,7 @@ form[action="/twilio-notify"] > * {
   border-radius: 5px;
   outline: none;
 }
-/* line 112, ../scss/main.scss */
+/* line 93, ../scss/main.scss */
 form[action="/set"] > *:focus,
 form[action="/contact"] > *:focus,
 form[action="/twilio-alarm"] > *:focus,
@@ -99,91 +93,111 @@ form[action="/twilio-notify"] > *:focus {
   box-shadow: 0 0 5px #75d4ef;
 }
 
-/* line 119, ../scss/main.scss */
+/* line 100, ../scss/main.scss */
 .text {
   clear: both;
 }
 
-/* line 125, ../scss/main.scss */
+/* line 106, ../scss/main.scss */
 form[action="/twilio-alarm"],
 form[action="/twilio-warning"],
 form[action="/twilio-notify"] {
   display: inline-block;
 }
 
-/* line 129, ../scss/main.scss */
+/* line 110, ../scss/main.scss */
 form[action="/twilio-warning"] {
   margin-left: 1em;
   margin-right: 1em;
 }
 
-/* line 134, ../scss/main.scss */
+/* line 115, ../scss/main.scss */
 input[type="submit"] {
   background: #a7b0b2;
   color: #fff;
   padding: 0.5em 1em;
 }
-/* line 139, ../scss/main.scss */
+/* line 120, ../scss/main.scss */
 input[type="submit"]:hover {
   background: #fff;
   color: #a7b0b2;
   transition: 0.5s;
 }
 
-/* line 147, ../scss/main.scss */
+/* line 128, ../scss/main.scss */
 #testing > * {
   display: inline-block;
 }
 
-/* line 151, ../scss/main.scss */
+/* line 132, ../scss/main.scss */
 #testing {
   clear: both;
 }
 
-/* line 155, ../scss/main.scss */
+/* line 136, ../scss/main.scss */
 #start {
   margin-right: 0.5em;
 }
 
-/* line 160, ../scss/main.scss */
+/* line 141, ../scss/main.scss */
 .track, .reminder {
   float: left;
   width: 40%;
 }
 
-/* line 165, ../scss/main.scss */
+/* line 146, ../scss/main.scss */
 img {
   width: 400px;
 }
 
-/* line 170, ../scss/main.scss */
+/* line 151, ../scss/main.scss */
 .track {
   margin-bottom: 10%;
 }
 
-/* line 174, ../scss/main.scss */
+/* line 155, ../scss/main.scss */
+.slogan-inter {
+  margin-top: 0;
+  margin-bottom: 0;
+  font-size: 200%;
+}
+
+/* line 161, ../scss/main.scss */
+.exercise {
+  margin-top: 1%;
+  margin-bottom: 5%;
+  font-size: 150%;
+  text-transform: uppercase;
+}
+
+/* line 168, ../scss/main.scss */
+#name-exer {
+  color: #8c979a;
+}
+
+/* line 172, ../scss/main.scss */
 #sets, #reps {
   display: inline-block;
   text-align: center;
 }
 
-/* line 179, ../scss/main.scss */
+/* line 177, ../scss/main.scss */
 #sets {
   margin-right: 1em;
 }
 
-/* line 183, ../scss/main.scss */
+/* line 181, ../scss/main.scss */
 #reps {
   margin-left: 1em;
 }
 
-/* line 187, ../scss/main.scss */
+/* line 185, ../scss/main.scss */
 .val-title {
   font-size: 150%;
   margin: 0;
 }
 
-/* line 192, ../scss/main.scss */
+/* line 190, ../scss/main.scss */
 .sets, .reps {
   margin: 0;
   font-size: 800%;
