@@ -66,7 +66,7 @@
 				$( "#stop" ).click(function() {
 					record = false;
 					alert("stop");
-					//var res = $.csv.fromArrays(final);
+					//var res = $.csv.fromArrays(final); lalalalla
 					//console.log(res);
 					var resAcc = $.csv.fromArrays(accFinal);
 					console.log("ACCELERATION");
