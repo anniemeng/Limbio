@@ -173,7 +173,6 @@
 
                       $( ".sets").text(count_sets);
 
-                      if (count_sets != 0) {
 	                      $( ".timer").text("Congrats, you have finished a set! Please wait 3 minutes before begining the next set.");
 	                      var time = 5000;
 	                      count_reps = {{ reps }}; 
@@ -182,8 +181,7 @@
 	                      setTimeout(function(){ $( ".timer").text("Countdown: 2");}, time + 1000);
 	                      setTimeout(function(){ $( ".timer").text("Countdown: 1");}, time + 2000);
 	                      setTimeout(function(){ $( ".timer").text("Ready, Go!");}, time + 3000);
-	                      //setTimeout(function() { count_reps = {{ reps }}; $( ".reps").text(count_reps);, time + 4000);
-                  	}
+	                      //setTimeout(function() { count_reps = {{ reps }}; $( ".reps").text(count_reps);, time + 4000)
 
                       $( ".sets").text(count_sets);
                     }
