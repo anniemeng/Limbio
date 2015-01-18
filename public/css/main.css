@@ -159,17 +159,18 @@ img {
 /* line 156, ../scss/main.scss */
 .track {
   clear: both;
+  margin-top: 1%;
   margin-bottom: 10%;
 }
 
-/* line 161, ../scss/main.scss */
+/* line 162, ../scss/main.scss */
 .slogan-inter {
   margin-top: 0;
   margin-bottom: 0;
   font-size: 200%;
 }
 
-/* line 167, ../scss/main.scss */
+/* line 168, ../scss/main.scss */
 .exercise {
   margin-top: 1%;
   margin-bottom: 0;
@@ -177,7 +178,7 @@ img {
   text-transform: uppercase;
 }
 
-/* line 174, ../scss/main.scss */
+/* line 175, ../scss/main.scss */
 .manual {
   margin-top: 0.5%;
   margin-bottom: 5%;
@@ -185,41 +186,41 @@ img {
   font-style: italic;
 }
 
-/* line 181, ../scss/main.scss */
+/* line 182, ../scss/main.scss */
 #name-exer {
   color: #8c979a;
 }
 
-/* line 185, ../scss/main.scss */
+/* line 186, ../scss/main.scss */
 #sets, #reps {
   display: inline-block;
   text-align: center;
 }
 
-/* line 190, ../scss/main.scss */
+/* line 191, ../scss/main.scss */
 #sets {
   margin-right: 1em;
 }
 
-/* line 194, ../scss/main.scss */
+/* line 195, ../scss/main.scss */
 #reps {
   margin-left: 1em;
 }
 
-/* line 198, ../scss/main.scss */
+/* line 199, ../scss/main.scss */
 .val-title {
   font-size: 150%;
   margin: 0;
 }
 
-/* line 203, ../scss/main.scss */
+/* line 204, ../scss/main.scss */
 .sets, .reps {
   margin: 0;
   font-size: 800%;
   line-height: 1em;
 }
 
-/* line 210, ../scss/main.scss */
+/* line 211, ../scss/main.scss */
 .congrats {
   font-size: 300%;
 }

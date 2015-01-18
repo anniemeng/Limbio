@@ -50,6 +50,9 @@
 			<form action='/twilio-notify' method='post'>
 				<input type='submit' value="Text Notify Demo">
 			</form>
+			<form action='/postmate' method='post'>
+				<input type='submit' value="Postmate Demo">
+			</form>
 		</div>
 
   
@@ -193,7 +196,6 @@
 
 
                     if (count_sets == 1 && count_reps == 0) {
-                      alert ("ANNDD YOUU AREEE THE CHAMMPIOOONN");
 					  window.location.href="/finish";
                     }
            		 });

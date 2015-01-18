@@ -60,7 +60,6 @@ router.post('/set', function(req, res) {
 	  time: req.body.time
   });
 
-  req.session.message = 'Settings saved!';
   return res.redirect('/contact');
 });
 
@@ -77,7 +76,6 @@ router.post('/contact', function(req, res) {
 	phone: req.body.phone
   });
 
-  req.session.message = 'Contact saved!';
   return res.redirect('/interface');
 });
 
@@ -118,5 +116,23 @@ router.post('/twilio-notify', function(req, res) {
 
     return res.redirect('/interface');
 }); */
+
+// POSTMATES
+/*router.post('/postmate', function(req, res) {
+	var url = 'https://api.postmates.com';
+	var quote = '/v1/customers/:customer_id/delivery_quotes';
+	getJSON(user, function(json) {
+		console.log(json);
+	});
+});
+
+function getJSON(url, callback) {
+	  $.ajax({
+		url: url,
+		complete: function(xhr) {
+		  callback.call(null, xhr.responseJSON);
+		}
+	  });
+}*/
 
 module.exports = router;
