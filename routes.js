@@ -28,6 +28,8 @@ router.get('/contact', function(req, res) {
 router.get('/interface', function(req, res) {
     return res.render('interface', {
     title: 'Rehabilitate',
+	sets: req.session.settings[0].sets,
+	reps: req.session.settings[0].reps
   });
 });
 
@@ -70,7 +72,7 @@ router.post('/contact', function(req, res) {
 });
 
 //TWILIO
-router.post('/twilio', function(req, res) {
+/*router.post('/twilio', function(req, res) {
 	client.messages.create({
 		body: "you need to rehabilitate!"
 	}, function(err, message) { 
@@ -79,6 +81,6 @@ router.post('/twilio', function(req, res) {
 	
 	req.session.message = 'sent message!';
     return res.redirect('/interface');
-});
+});*/
 
 module.exports = router;
