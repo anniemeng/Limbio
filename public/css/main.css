@@ -218,3 +218,8 @@ img {
   font-size: 800%;
   line-height: 1em;
 }
+
+/* line 210, ../scss/main.scss */
+.congrats {
+  font-size: 300%;
+}
