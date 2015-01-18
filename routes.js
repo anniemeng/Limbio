@@ -31,7 +31,8 @@ router.get('/interface', function(req, res) {
     return res.render('interface', {
     title: 'Rehabilitate',
 	sets: req.session.settings[num - 1].sets,
-	reps: req.session.settings[num - 1].reps
+	reps: req.session.settings[num - 1].reps,
+  name: req.session.settings[num - 1].name
   });
 });
 
@@ -46,10 +47,10 @@ router.post('/set', function(req, res) {
   //save settings
   req.session.settings.push({
     id: req.session.settings.length + 1,
-	name: req.body.type,
+	  name: req.body.type,
     sets: req.body.sets,
     reps: req.body.reps,
-	time: req.body.time
+	  time: req.body.time
   });
 
   req.session.message = 'Settings saved!';
