@@ -9,6 +9,7 @@
     <body>
         <h1>Rehabilitate</h1>
 		<p class="exercise"><strong>Now doing:</strong> <span id="name-exer">{{name}}</span></p>
+		 <p class="manual"> Bend your wrist up AND down to count for one repetition.</p>
 
 		{{#message}}
       		<p class="msg">{{message}}<p>
@@ -30,12 +31,6 @@
 			<img id="wu" src="img/wrist_up.png">
 			<img id="wd" src="img/wrist_down.png">
 		</div>
-
-
-    <div id = "manual"> 
-      <!--<img src="img/wrist_move.gif">-->
-      <p > Bend your wrist up AND down to count for one repetition.</p>
-    </div>
 
 		<!--<div id="testing">
 			<div id="start">
