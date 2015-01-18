@@ -4,8 +4,10 @@
         <title>{{ title }}</title>
 		<link rel="stylesheet" href="css/normalize.css"/>
 		<link rel="stylesheet" href="css/main.css"/>
+    <link rel="stylesheet" href="css/animate.min.css">
     </head>
     <body>
+      <div class = "hider">
         <h1>Rehabilitate</h1>
         <p class="slogan">Treat yourself right</p>
 		<!-- error message-->
@@ -28,15 +30,44 @@
 			<img id="wu" src="img/wrist_up.png">
 			<img id="wd" src="img/wrist_down.png">
 		</div>
+  </div>
 
+    <div id = "manual"> 
+      <img src="img/wrist_move.gif">
+      <p > Bend your wrist up AND down to count for one repetition.</p>
+    </div>
+
+    <div class = "hider">
 		<form action='/twilio' method='post'>
 			<input type='submit' value="Text!">
 		</form>
+    </div>
   
          <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
         <script src="js/myo.js"></script>
         <script>
            $(document).ready(function() {
+            
+              
+              $(".hider").css("display", "none");
+              $('#manual').addClass('animated fadeInRightBig');
+
+
+              $('#manual').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function() {   
+
+                     setTimeout( function(){
+                        $('#manual').addClass('animated fadeOutLeftBig');
+                        $('#manual').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function() {
+                          });
+                     }, 1000);
+
+                     setTimeout( function(){
+                        $('.hider').css("display", 'initial');
+                     }, 1200);
+
+              });
+
+
 				var myMyo = Myo.create();
 				myMyo.unlock();
 				var bool = true;
