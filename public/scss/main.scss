@@ -149,6 +149,7 @@ img {
 
 //TRACKING INFO
 .track {
+	clear: both;
 	margin-bottom: 10%;
 }
 
@@ -160,9 +161,16 @@ img {
 
 .exercise {
 	margin-top: 1%;
-	margin-bottom: 5%;
+	margin-bottom: 0;
 	font-size: 150%;
 	text-transform: uppercase;
+}
+
+.manual {
+	margin-top: 0.5%;
+	margin-bottom: 5%;
+	font-size: 100%;
+	font-style:italic;
 }
 
 #name-exer {
