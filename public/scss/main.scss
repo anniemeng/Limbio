@@ -123,16 +123,39 @@ input[type="submit"] {
 	display: inline-block;
 }
 
-.sets, .reps {
-	display: inline-block;
-	font-size: 500%;
+#test {
+	clear: both;
 }
 
-.sets, 
+#sets, #reps {
+	display: inline-block;
+	text-align: center;
+}
+
+#sets {
+	margin-right: 1em;
+}
+
+#reps {
+	margin-left: 1em;
+}
+
+.val-title {
+	font-size: 150%;
+	margin: 0;
+}
+
+.sets, .reps {
+	margin: 0;
+	font-size: 700%;
+	line-height:1em;
+}
+ 
 #start {
 	margin-right: 0.5em;
 }
 
-.reps {
-	margin-left: 0.5em;
+img {
+	width: 200px;
+	height: 200px;
 }
