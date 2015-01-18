@@ -91,7 +91,9 @@ select {
 
 form[action="/set"] > *,
 form[action="/contact"] > *,
-form[action="/twilio"] > * {
+form[action="/twilio-alarm"] > *,
+form[action="/twilio-warning"] > *,
+form[action="/twilio-notify"] > * {
 	-webkit-box-shadow:0 0 6px $form-light;
   	-moz-box-shadow:0 0 5px $form-light;
   	box-shadow:0 0 5px $form-light;
@@ -112,6 +114,21 @@ form[action="/twilio"] > * {
   		-moz-box-shadow:0 0 5px $form;
   		box-shadow:0 0 5px $form;
 	}
+}
+
+.text {
+	clear:both;
+}
+
+form[action="/twilio-alarm"],
+form[action="/twilio-warning"],
+form[action="/twilio-notify"] {
+	display: inline-block;
+}
+
+form[action="/twilio-warning"] {
+	margin-left: 1em;
+	margin-right: 1em;
 }
 
 input[type="submit"] {
@@ -151,7 +168,7 @@ img {
 
 //TRACKING INFO
 .track {
-	margin-bottom: 5%;
+	margin-bottom: 10%;
 }
 
 #sets, #reps {

@@ -8,25 +8,29 @@
     <body>
         <h1>Rehabilitate</h1>
 		<p class="slogan">Treat yourself right</p>
-		
+
 		<!-- settings -->
 		<div id="form">
 		<h3>Choose your fuel</h3>
         <form action='/set' method='post'>
+
 			<select name="type">
-				<option value="arm-up">Arm-up</option>
-			    <option value="arm-side">Arm-down</option>
+				<option value="Wrist Flex">Wrist Flex</option>
+			    <option value="Fist Grip">Fist Grip</option>
+
 			</select>
 		  <input type='number' name='sets' placeholder='# of sets'>
 		  <input type='number' name='reps' placeholder='# of reps'>
 		  <input type='time' name='time' placeholder='10:30 AM'>
 		  <input type='submit' value="Almost ready!">
 		</form>
+
 		<!-- error message-->
 		{{#message}}
       		<p class="msg">{{message}}<p>
     	{{/message}}
 		</div>
          <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+
     </body>
 </html>
