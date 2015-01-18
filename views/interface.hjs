@@ -2,27 +2,31 @@
 <html lang="en">
     <head>
         <title>{{ title }}</title>
+		<link rel="stylesheet" href="css/normalize.css"/>
+		<link rel="stylesheet" href="css/main.css"/>
     </head>
     <body>
         <h1>Rehabilitate</h1>
-		<a href="/">Back</a>
-        
+        <p class="slogan">Treat yourself right</p>
 		<!-- error message-->
 		{{#message}}
       		<p>{{message}}<p>
     	{{/message}}
 		
-		<div id="start">
-            Start
-        </div>
-        <div id="stop">
-            Stop
-        </div>
+		<div id="testing">
+			<div id="start">
+				Start
+			</div>
+			<div id="stop">
+				Stop
+			</div>
+		</div>
 		<div>
 			<p class="sets"></p>
-			<br>
 			<p class= "reps"></p>
 		</div>
+    <img src="img/wrist_up.jpg">
+    <img src="img/wrist_down.jpg">
 		<form action='/twilio' method='post'>
 			<input type='submit' value="Text!">
 		</form>
@@ -100,6 +104,7 @@
 
                     if (count_reps == 0 && count_sets != 0) {
                       count_sets = count_sets - 1;
+
                       $( ".sets").text("Sets left: " + count_sets);
 
                       if (count_sets != 0) {
@@ -114,6 +119,7 @@
 	                      setTimeout(function(){ $( ".reps").text(count_reps);}, time + 4000);
                   	}
 
+                      $( ".sets").text(count_sets);
                     }
 
                     if (count_sets == 0) {

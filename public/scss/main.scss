@@ -1,0 +1,138 @@
+@import url(http://fonts.googleapis.com/css?family=Lato:300,100);
+$main-f: 'Lato', sans-serif;
+$light-g: #e5e8ec;
+$form-light: rgb(157,207,224);
+$form: rgb(117, 212, 239);
+
+// More colors
+$indigo: #0d3d56;
+$sophia: #0f5b78;
+$skye:   #117899;
+$alice:  #1496bb;
+$jade:   #5ca794;
+$kelly:  #50b121;
+$daisy:  #ebc944;
+$amber:  #edaa38;
+$april:  #f08c2d;
+$coral:  #f26d21;
+$rowan:  #d94e20;
+$ruby:   #c02f1d;
+
+// More grays
+$jet:    #131516;
+$raven:  #373d3f;
+$asher:  #555f61;
+$stone:  #707c80;
+$gray:   #8c979a;
+$silver: #a7b0b2;
+$heather:#c1c7c9;
+$pearl:  #dadedf;
+$lilia:  #f2f3f4; 
+
+// ALL
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+body {
+	margin-left: 3%;
+	color: #fff;
+	font-family: $main-f;
+	text-align:left;
+	background: url("../img/light.png") no-repeat 50% 50%;
+	background-size: cover;
+}
+
+h1 {
+	text-transform:uppercase;
+	font-size: 600%;
+	margin-top: 0.2em;
+	margin-bottom:0;
+    margin-left: -0.7%;
+}
+
+// INDEX STYLING
+.slogan {
+	margin-top: 0;
+	font-size: 200%;
+	margin-bottom: 5%;
+}
+
+select {
+	-webkit-appearance: none;
+	color: $silver;
+	text-align: center;
+	padding: 0.5em;
+}
+
+// CONTACT AND LANDING FORM
+#form {
+	border-radius: 10px;
+	padding: 0.3em 0;
+	padding-bottom: 1em;
+	width: 30%;
+	margin: 0 auto;
+	float:left;
+	
+	h3 {
+		margin-bottom: 1em;
+	}
+}
+
+form[action="/set"] > *,
+form[action="/contact"] > *,
+form[action="/twilio"] > * {
+	-webkit-box-shadow:0 0 6px $form-light;
+  	-moz-box-shadow:0 0 5px $form-light;
+  	box-shadow:0 0 5px $form-light;
+	
+	border: 1px solid $form;
+	padding: 0.5em;
+	color: $silver;
+	font-size: 100%;
+	display:block;
+	margin: 0.5em auto;
+	float:left;
+	clear:both;
+	border-radius: 5px;
+	outline: none;
+	
+	&:focus {
+		-webkit-box-shadow:0 0 6px $form;
+  		-moz-box-shadow:0 0 5px $form;
+  		box-shadow:0 0 5px $form;
+	}
+}
+
+input[type="submit"] {
+	background: $silver;
+	color: #fff;
+	padding: 0.5em 1em;
+	
+	&:hover {
+		background: #fff;
+		color: $silver;
+		transition: 0.5s;
+	}
+}
+
+// INTERFACE
+#testing > * {
+	display: inline-block;
+}
+
+.sets, .reps {
+	display: inline-block;
+	font-size: 500%;
+}
+
+.sets, 
+#start {
+	margin-right: 0.5em;
+}
+
+.reps {
+	margin-left: 0.5em;
+}
