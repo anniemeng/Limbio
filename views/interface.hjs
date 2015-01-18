@@ -51,7 +51,6 @@
 
 				$( "#start" ).click(function() {
 					record = true;
-					// alert("start");
 				});
 			   
 
@@ -85,17 +84,6 @@
            	  	   		$( ".reps").text(count_reps);
            	  		}
 
-           	  		if (count_reps == 0) {
-           	  			count_reps = {{reps}};
-           	  			$( ".reps").text(count_reps);
-           	  			count_sets = count_sets - 1;
-           	  			$( ".sets").text(count_sets);
-           	  		}
-
-           	  		if (count_sets == 0) {
-           	  			alert ("ANNDD YOUU AREEE THE CHAMMPIOOONN");
-           	  		}
-
             	  }
             		if (pose_name == 'wave_out' && edge) {
              	   		console.log('good job (wave out)!');
@@ -108,18 +96,21 @@
            	  	   			count_reps = count_reps - 1;
            	  	   			$( ".reps").text(count_reps);
            	  			}
-
-           	  			if (count_reps == 0) {
-           	  				count_reps = {{reps}};
-           	  				$( ".reps").text(count_reps);
-           	  				count_sets = count_sets - 1;
-           	  				$( ".sets").text(count_sets);
-           	  			}
-
-           	  			if (count_sets == 0) {
-           	  				alert ("ANNDD YOUU AREEE THE CHAMMPIOOONN");
-           	  			}
              		 }
+
+                 if (count_reps == 0) {
+                      count_reps = {{reps}};
+                      $( ".reps").text(count_reps);
+                      count_sets = count_sets - 1;
+                      $( ".sets").text(count_sets);
+                      var restWindow = window.open("", "Instructions", "width=300, height=200");
+                      restWindow.document.write("<p> Please wait three minutes before continuing onto the next set. </p>");
+                       setTimeout(function(){ restWindow.close()}, 180000);
+                    }
+
+                    if (count_sets == 0) {
+                      alert ("ANNDD YOUU AREEE THE CHAMMPIOOONN");
+                    }
            		 });
 				/*
 				myMyo.on('accelerometer', function(data){
@@ -135,10 +126,6 @@
 						  //console.log(result);
 					  }
 				});*/
-
-		    myMyo.on('lock', function(){
-                myMyo.unlock();
-            });
 
             });
         </script>
