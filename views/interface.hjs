@@ -38,10 +38,14 @@
 				var final = [];
 				var accFinal = [];
 
+
 			   	$( ".sets").text( {{ sets }} );
 				$( "#start" ).click(function() {
 					record = true;
-					alert("strt");
+					// alert("start");
+					var restWindow = window.open("", "Instructions", "width=300, height=200");
+					restWindow.document.write("<p> Please wait three minutes before continuing onto the next set. </p>");
+					setTimeout(function(){ restWindow.close()}, 180000);
 				});
 			   
 
