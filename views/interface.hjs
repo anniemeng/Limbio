@@ -10,9 +10,32 @@
         <p class="slogan">Treat yourself right</p>
 		<!-- error message-->
 		{{#message}}
-      		<p>{{message}}<p>
+      		<p class="msg">{{message}}<p>
     	{{/message}}
 		
+<<<<<<< HEAD
+=======
+		<div class="track">
+			<div id="sets">
+				<p class="val-title">Sets</p>
+				<p class="sets"></p>
+			</div>
+			<div id="reps">
+				<p class="val-title">Reps</p>
+				<p class="reps"></p>
+			</div>
+		</div>
+		
+		<div class="reminder">
+			<img src="img/wrist_up.png">
+			<img src="img/wrist_down.png">
+		</div>
+
+		<form action='/twilio' method='post'>
+			<input type='submit' value="Text!">
+		</form>
+		
+>>>>>>> c5765118a40e923abd847bf92e93929763b2c63f
 		<div id="testing">
 			<div id="start">
 				Start
