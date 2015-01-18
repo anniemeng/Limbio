@@ -12,9 +12,7 @@
 		{{#message}}
       		<p class="msg">{{message}}<p>
     	{{/message}}
-		
-<<<<<<< HEAD
-=======
+
 		<div class="track">
 			<div id="sets">
 				<p class="val-title">Sets</p>
@@ -27,15 +25,14 @@
 		</div>
 		
 		<div class="reminder">
-			<img src="img/wrist_up.png">
-			<img src="img/wrist_down.png">
+			<img id="wu" src="img/wrist_up.png">
+			<img id="wd" src="img/wrist_down.png">
 		</div>
 
 		<form action='/twilio' method='post'>
 			<input type='submit' value="Text!">
 		</form>
-		
->>>>>>> c5765118a40e923abd847bf92e93929763b2c63f
+
 		<div id="testing">
 			<div id="start">
 				Start
@@ -48,8 +45,7 @@
 			<p class="sets"></p>
 			<p class= "reps"></p>
 		</div>
-    <div id = "wu" > <img src="img/wrist_up.png"> </div>
-    <div id = "wd" > <img src="img/wrist_down.png"> </div>
+		
 		<form action='/twilio' method='post'>
 			<input type='submit' value="Text!">
 		</form>
