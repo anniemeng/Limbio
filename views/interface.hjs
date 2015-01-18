@@ -12,7 +12,7 @@
 		{{#message}}
       		<p class="msg">{{message}}<p>
     	{{/message}}
-
+		<p class="timer"></p>
 		<div class="track">
 			<div id="sets">
 				<p class="val-title">Sets</p>
@@ -32,15 +32,6 @@
 		<form action='/twilio' method='post'>
 			<input type='submit' value="Text!">
 		</form>
-
-		<div id="testing">
-			<div id="start">
-				Start
-			</div>
-			<div id="stop">
-				Stop
-			</div>
-		</div>
   
          <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
         <script src="js/myo.js"></script>
@@ -64,8 +55,8 @@
 				var count_sets = {{sets}} ;
 				var count_reps = {{ reps }} ;
 
-			   	$( ".sets").text("Sets left: " + count_sets);
-			   	$( ".reps").text("Reps left: " + count_reps);
+			   	$( ".sets").text(count_sets);
+			   	$( ".reps").text(count_reps);
 
 				$( "#start" ).click(function() {
 					record = true;
@@ -94,7 +85,7 @@
                     $("#wd").css("display", "initial");
 					$("#wu").css("display", "none");
 					if ($("#wd").css("display") === "initial") {
-						$("#wd").delay(1000).css("display", "none");
+						$("#wd").delay(500).css("display", "none");
 					}
            	  	   if (count == 0) {
            	  	   	count = 1;
@@ -103,7 +94,7 @@
            	  	   if (count == 2) {
            	  	   		count = 0;
            	  	   		count_reps = count_reps - 1;
-           	  	   		$( ".reps").text("Reps left: " + count_reps);
+           	  	   		$( ".reps").text(count_reps);
            	  		}
 
             	  }
@@ -112,7 +103,7 @@
                     $("#wu").css("display", "initial");
 					$("#wd").css("display", "none");
 					if ($("#wu").css("display") === "initial") {
-						$("#wu").delay(1000).css("display", "none");
+						$("#wu").delay(500).css("display", "none");
 					}
              	   		if (count == 0) {
            	  	   			count = 2;
@@ -121,25 +112,24 @@
            	  	  	 	if (count == 1) {
            	  	  		 count = 0;
            	  	   			count_reps = count_reps - 1;
-           	  	   			$( ".reps").text("Reps left: " + count_reps);
+           	  	   			$( ".reps").text(count_reps);
            	  			}
              		 }
 
                     if (count_reps == 0 && count_sets != 0) {
                       count_sets = count_sets - 1;
 
-                      $( ".sets").text("Sets left: " + count_sets);
+                      $( ".sets").text(count_sets);
 
                       if (count_sets != 0) {
                       	count_reps = {{ reps }};
-                      	$( ".reps").text("Reps left: " + count_reps);
-	                      $( ".reps").text("Congrats, you have finished a set! Please wait 3 minutes before begining the next set.");
+                      	$( ".reps").text(count_reps);
+	                      $( ".timer").text("Congrats, you have finished a set! Please wait 3 minutes before begining the next set.");
 	                      var time = 3000;
-	                      setTimeout(function(){ $( ".reps").text("Countdown: 3");}, time);
-	                      setTimeout(function(){ $( ".reps").text("Countdown: 2");}, time + 1000);
-	                      setTimeout(function(){ $( ".reps").text("Countdown: 1");}, time + 2000);
-	                      setTimeout(function(){ $( ".reps").text("Ready, Go!");}, time + 3000);
-	                      setTimeout(function(){ $( ".reps").text(count_reps);}, time + 4000);
+	                      setTimeout(function(){ $( ".timer").text("Countdown: 3");}, time);
+	                      setTimeout(function(){ $( ".timer").text("Countdown: 2");}, time + 1000);
+	                      setTimeout(function(){ $( ".timer").text("Countdown: 1");}, time + 2000);
+	                      setTimeout(function(){ $( ".timer").text("Ready, Go!");}, time + 3000);
                   	}
 
                       $( ".sets").text(count_sets);
